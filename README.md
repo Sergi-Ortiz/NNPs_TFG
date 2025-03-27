@@ -1,44 +1,34 @@
 # __Machine Learning Neural Network Potentials__
-This repo contains all the documentation, protocol, models and code regarding the study of different ML-NNP models in the context of Chemistry and Physics for the physics bachelor's thesis project (Treball de Fi de Grau de Física). For any questions, feel free to reach out at sergi.ortizr@autonoma.cat. 
+This repository contains all the documentation, protocol, models and code regarding the study of different Machine Learning Neural Network Potential (ML-NNP) models in the context of Chemistry and Physics for the physics bachelor's thesis project at Universitat Autònoma de Barcelona (Treball de Fi de Grau de Física). For inquiries regarding the project, feel free to reach out at sergi.ortizr@autonoma.cat. 
 
-The aim of this project is to use different pretrained ML-based interatomic potentials to assess what physics a Neural Network Potential (NNP) has learnt during training, examining the molecular descriptors, dataset and model architecture used to gain insight on the predictions, hopefully making these models more interpretable and transparent. 
+The aim of this project is two-fold and involves the use of several pretrained ML-based interatomic potentials to assess how the fundamental physics knowledge of each model affects its predictions. First, we aim to study the qualitative description of the interactions for several systems. Second, the models' limitations in the prediction of atomic interactions are discussed according to what physics are understood by the models, the training dataset, molecular descriptors and architecture used, hopefully providing a solid foundation and the necessary insight to interpret their predictions, ultimately making the models more transparent and interpretable. 
 
 # __Project structure__
-The project is structured in four different parts, each building on the concepts stated in previous parts. First, a general introduction provides context regarding atomic modeling, electronic structure and general deep learning, which are key concepts to understand the bulk of the project. Next, the NNP models (objects of study) will be presented in detail, as well as the tests, systems and protocols used to compare and assess the physics learnt by each NNP. The results of each test will be interpreted and discussed. Thidrly, a motivated showcase of the NNP models will be presented with different key examples, to support the bulk of the project and give a more practical view on the topic. Finally, the future perspectives on the state-of-the-art will be discussed to provide a bit of context on this rapidly moving field. 
+The project is structured in four different parts, with each part building on the concepts from the previous ones. First, a general introduction provides context regarding atomic modeling, electronic structure and general deep learning, which are key concepts to understand the bulk of the project. Next, the NNP models (object of study) are presented in detail. Thirdly, a set of tests especially motivated to assess the physical adequacy of the models are introduced, and the results are discussed and compared. Finally, the future perspectives on the state-of-the-art are discussed to provide an overview on this rapidly moving field. 
 
 ## __Introduction__
 The introduction is organized in three related sections, including atomic modeling basics, a deep learning introduction and a motivation for this project based on Physics Informed Neural Networks (PINNs).  
-- **Atomic modeling basicss**
-  - *From the Schrödinger equation to classical interatomic potentials.*  Overview of how to model systems and the level of detail tradeoff. Schrödinger equation and electronic structure methods. Necessity of a simple functional form to represent atomic interactions. Classical FFs and how ML could provide more accurate FFs (of potentially *ab initio* quality) at classical FF cost. 
+- **Atomic modeling basics**
+  - *From the Schrödinger equation to classical interatomic potentials.*  Overview of how to model systems and the level of detail tradeoff. Schrödinger equation and electronic structure methods. Necessity of a simple functional form to represent atomic interactions. Classical Force Fields (FFs) and how ML could provide *ab initio* quality at cheaper computational cost. 
 - **Deep learning introduction**
-  - *Structure of a DL model*. Importance of the dataset, dataset preprocessing, model definition and training (optimization, regularization techniques). Importance of generalization of an ML model. Introduction to the fully-connected multi-layer perceptron (MLP) and Message Passing Neural Networks (MPNNs) in the context of graph neural networks (GNNs). 
+  - *Structure of a DL model*. Basic Deep Learning concepts, an introduction to the fully-connected multi-layer perceptron (MLP), Graph Neural Networks (GNNs) (and Message Passing Neural Networks). 
 - **PINNs**
-  - Motivational example on how a model can learn the basic physics behind a system from a trajectory, and how these models have been used to infer the physics of a system which trajectory has been observed but the interactions have not been modeled. 
+  - Motivational example on how the physical adequacy is imperative when using ML to model for a physical task. 
 
-Check `introduction` directory for more info. 
-
-## __Bulk of the project__
-The main chunk of the project is organized in three distinct sections, including a model selection, an experimental procedure and an interpretation and dicussion sections. 
+## __Models studied__
+A practical introduction to all the models used, regarding how to install and use them within `ASE` is provided in the `models` directory, as well as a brief introduction to using `ASE`. A theoretical introduction regarding model architecture and more technical aspects can be found in the paper `project_v0.pdf`, especially in the several appendices included. Three main aspects are considered.
 - **Model selection**
   - *Introduction to the NNP models*. Atomic descriptors and approximations used in model input. Architecture choices. Model comparison.
+
+
+## __Assessing physical adequacy__
+Once the models have been introduced, a computational protocol consisting of a series of tests have been designed to evaluate the qualitative correctness of the predicted interactions and their limitations regarding the physics contemplated by each model. The tests and discussion can be found in the `project_v0.pdf` provided, with the code and exact protocol in `scripts` directory.
 - **Experimental procedure**
-  -  *Understanding the basic physics learnt*. Construction of tests to assess translational, rotational and permutation invariance.  Assessment of chemical environment description quality: effect of cutoff distance and molecular descriptors used. Tests of many-body correlation between $N$-neighbors. Lack of long-range interactions.
-  -  *Model systems*. List and motivation of the systems used for each test
-  -  *Protocol*. Code used to fairly compare each model systematically within the ASE (atomic simulation environment) package. 
+  -  *Understanding the physical adequacy*. Construction of tests to assess translational, rotational and permutation invariance.  Assessment of chemical environment description quality: effect of cutoff distance and molecular descriptors used. Many-body correlations and lack of long-range interactions.
+  -  *Model systems*. List and motivation of the systems used for each test.
+  -  *Protocol*. Code used to compare all models systematically within the `ASE`.
 - **Interpretation and discussion**
-  -  Interpretation of the results in the context of the the model selection. Discussion.
+  -  Interpretation of the results in the context of the the model selection. Discussion and interpretation of results.
  
-Models, the installation procedure, its properties and relevant references can be found at `models` directory. Note that each model is implemented as a calculator in `ASE`. 
-
-## __Example showcase__
-This section provides simple applications of NNPs which allows to discuss the adventages of NNPs and motive the interpretation and discussion of the previous section. 
-- **Biaryl torsional barriers**. Example to prove the usefulness of NNPs.
-- **[Problematic example]**. Example to prove the dangers of not checking the physical foundation of a system and use a NNP as a *black box*.  
-- **[Extra 1]**. TODO
-
-Check `examples` directory for more info. 
-
 ## __State of the art and future of the field__
-This last section provides an end to the project explaining what implications NNPs will have in areas such as medicinal chemistry, computational chemistry of biological systems, and materials science.
-
-Check the `SOTA` directory for more info. 
+A brief last section provides an end to the project explaining what implications NNPs have in areas such as medicinal chemistry, computational chemistry of biological systems, and materials science and the aspects that require still some work to further increase the applicability of these models in science. 
