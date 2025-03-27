@@ -1,0 +1,39 @@
+#!/bin/bash
+#SBATCH -J COSAN-scan.%j
+#SBATCH -e /home/sortiz/COSAN-scan/COSAN-scan.%j.err
+#SBATCH -o /home/sortiz/COSAN-scan/COSAN-scan.%j.out
+#SBATCH -p normal
+#SBATCH -n 1
+#SBATCH -c 16
+#SBATCH -t 4-02:00
+# script generated automatically by cosan_job_gen.sh
+# COSAN scan
+# Gaussian job 
+
+# gaussian settings
+ml Gaussian/16.C.02-AVX2
+#ml Gaussian/16.B.01-LEGACY 
+
+export GAUSS_SCRDIR=$SLURM_SUBMIT_DIR
+printf "gaussian dir:\t$GAUSS_SCRDIR\n"
+
+
+# copy the files to temp
+for ((i = 0 ; i < 3 ; i++)); do 
+    FILE="/home/sortiz/COSAN-scan/cosan_conf_$i.gjf"
+    echo $FILE
+    cp $FILE $TMP_DIR  
+done 
+
+cd $TMP_DIR
+
+# actual computation
+for ((i = 0 ; i < 3 ; i++)); do 
+
+    INPUT_FILES=cosan_conf_$i.gjf
+
+    printf "$i start: `date`\n"
+    srun g16 < $SLURM_SUBMIT_DIR/$INPUT_FILES > $SLURM_SUBMIT_DIR/cosan_conf_$i.log
+    printf "$i finish: `date`\n"
+
+done 
