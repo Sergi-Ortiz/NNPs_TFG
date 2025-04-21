@@ -32,3 +32,18 @@ Once the models have been introduced, a computational protocol consisting of a s
  
 ## __State of the art and future of the field__
 A brief last section provides an end to the project explaining what implications NNPs have in areas such as medicinal chemistry, computational chemistry of biological systems, and materials science and the aspects that require still some work to further increase the applicability of these models in science. 
+
+
+# __Citation__
+If you use or want to reference this work, use 
+```bibtex
+@phdthesis{NNPs_TFG,
+  title        = {Study of the physical adequacy of Machine Learning Potentials},
+  author       = {Sergi {Ortiz Ropero}},
+  year         = 2025,
+  month        = {July},
+  note         = {Available at \url{https://github.com/Sergi-Ortiz/NNPs_TFG/project.pdf}},
+  school       = {Universitat Autònoma de Barcelona},
+  type         = {BSc Thesis}
+}
+```
