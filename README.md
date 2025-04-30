@@ -42,7 +42,7 @@ If you use or want to reference this work, use
   author       = {Sergi {Ortiz Ropero}},
   year         = 2025,
   month        = {July},
-  note         = {Available at \url{https://github.com/Sergi-Ortiz/NNPs_TFG/project.pdf}},
+  note         = {Available at \url{https://github.com/Sergi-Ortiz/NNPs_TFG/blob/main/project.pdf}},
   school       = {Universitat Autònoma de Barcelona},
   type         = {BSc Thesis}
 }
