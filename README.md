@@ -16,13 +16,13 @@ The introduction is organized in three related sections, including atomic modeli
   - Motivational example on how the physical adequacy is imperative when using ML to model for a physical task. 
 
 ## __Models studied__
-A practical introduction to all the models used, regarding how to install and use them within `ASE` is provided in the `models` directory, as well as a brief introduction to using `ASE`. A theoretical introduction regarding model architecture and more technical aspects can be found in the paper `project.pdf`, especially in the several appendices included. Three main aspects are considered.
+A practical introduction to all the models used, regarding how to install and use them within `ASE` is provided in the `models` directory, as well as a brief introduction to using `ASE`. A theoretical introduction regarding model architecture and more technical aspects can be found in the BSc thesis, especially in the several appendices included. Three main aspects are considered.
 - **Model selection**
   - *Introduction to the NNP models*. Atomic descriptors and approximations used in model input. Architecture choices. Model comparison.
 
 
 ## __Assessing physical adequacy__
-Once the models have been introduced, a computational protocol consisting of a series of tests have been designed to evaluate the qualitative correctness of the predicted interactions and their limitations regarding the physics contemplated by each model. The tests and discussion can be found in the `project.pdf` provided, with the code and exact protocol in `scripts` directory.
+Once the models have been introduced, a computational protocol consisting of a series of tests have been designed to evaluate the qualitative correctness of the predicted interactions and their limitations regarding the physics contemplated by each model. The tests and discussion can be found in the thesis, with the code and exact protocol in `scripts` directory.
 - **Experimental procedure**
   -  *Understanding the physical adequacy*. Construction of tests to assess translational, rotational and permutation invariance.  Assessment of chemical environment description quality: effect of cutoff distance and molecular descriptors used. Many-body correlations and lack of long-range interactions.
   -  *Model systems*. List and motivation of the systems used for each test.
@@ -42,8 +42,9 @@ If you use or want to reference this work, use
   author       = {Sergi {Ortiz Ropero}},
   year         = 2025,
   month        = {July},
-  note         = {Available at \url{https://github.com/Sergi-Ortiz/NNPs_TFG/blob/main/project.pdf}},
+  note         = {Available at \url{https://github.com/Sergi-Ortiz/NNPs_TFG/blob/main}},
   school       = {Universitat Autònoma de Barcelona},
   type         = {BSc Thesis}
 }
 ```
+We are working on publishing this work, so stay tuned!
