@@ -1,0 +1,3 @@
+# rotation results for cosan
+# MODEL			MAX E			MAX F			MAX tau
+MACE-MP	8.996913362549094	1.3223323094280204e-06

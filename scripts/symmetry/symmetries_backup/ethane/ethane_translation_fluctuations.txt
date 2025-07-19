@@ -1,0 +1,3 @@
+# translation results for ethane
+# MODEL			MAX E			MAX F			MAX tau
+UMA_small	2.384185791015625e-07	6.36234318562856e-08	-0.029450968898128926
